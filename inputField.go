@@ -152,6 +152,11 @@ func (i *InputField) AddMarginLeft(left int) *InputField {
 	i.field.margin.left += left
 	return i
 }
+//setFieldHeight to increase the field height
+func (i *InputField) SetFieldHeight(h int) *InputField {
+	i.field.Position.H += h
+	return i
+}
 
 // AddValidate add input validator
 func (i *InputField) AddValidate(errMsg string, validate func(value string) bool) *InputField {
